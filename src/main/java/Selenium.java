@@ -21,7 +21,7 @@ public class Selenium {
 
         driver.get("https://passport.yandex.ru");
 
-        login("alexanderk@adjuggler.ru", "pass");
+        login("alexanderk@adjuggler.ru", "hiddenPass");
 
         driver.findElement(By.xpath("//a[text()=\"Почта\"]")).click();
 
