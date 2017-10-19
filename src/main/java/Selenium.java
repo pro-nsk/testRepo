@@ -8,7 +8,7 @@ import java.net.MalformedURLException;
 import static java.util.concurrent.TimeUnit.SECONDS;
 
 /**
- * Created by motors on 01.09.2017.
+ *
  */
 public class Selenium {
 
@@ -50,8 +50,6 @@ public class Selenium {
         driver.findElement(By.xpath("//div[@class=\"ns-view-container-desc mail-MessagesList js-messages-list mail-MessagesList_height_small\"]/div[1]//span[@class=\"_nb-checkbox-flag _nb-checkbox-normal-flag\"]")).click();
 
         driver.findElement(By.xpath("//span[text()=\"Удалить\"]")).click();
-
-//        driver.findElement(By.xpath("//span[text()=\"Удалить\" and @class=\"_nb-button-text\"]")).click();
 
         Thread.sleep(2000);
 
