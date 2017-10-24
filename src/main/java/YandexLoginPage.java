@@ -1,7 +1,7 @@
 import org.openqa.selenium.By;
 
 public class YandexLoginPage extends BasePage {
-    public void login(String login, String password) {
+    public YandexMailPage login(String login, String password) {
 
         driver.findElement(By.xpath("//input[@name=\"login\"]"))
                 .sendKeys(login);
@@ -10,5 +10,7 @@ public class YandexLoginPage extends BasePage {
                 .sendKeys(password);
 
         driver.findElement(By.xpath("//span[text()=\"Войти\"]")).click();
+
+        return new YandexMailPage();
     }
 }
