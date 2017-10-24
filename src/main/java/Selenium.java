@@ -1,7 +1,6 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 
@@ -19,11 +18,11 @@ public class Selenium {
         driver.manage().timeouts().implicitlyWait(60, SECONDS);
         driver.manage().window().maximize();
 
-        driver.get("https://passport.yandex.ru");
+        driver.get("https://mail.yandex.ru");
 
-        login("alexanderk@adjuggler.ru", "hiddenPass");
+        driver.findElement(By.xpath("//span[text()=\"Войти в Яндекс.Почту\"]")).click();
 
-        driver.findElement(By.xpath("//a[text()=\"Почта\"]")).click();
+        login("alexanderk@adjuggler.ru", System.getProperty("yandexPass"));
 
         driver.findElement(By
                 .xpath("//span[@class=\"mail-ComposeButton-Text\"]"))
@@ -64,6 +63,7 @@ public class Selenium {
         driver.findElement(By.xpath("//span[text()=\"По количеству писем\"]")).click();
 
         Thread.sleep(2000);
+
 
         driver.quit();
     }
