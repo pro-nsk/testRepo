@@ -22,9 +22,6 @@ public class YandexMailPage extends BasePage {
     public static void main(String[] args) throws InterruptedException, MalformedURLException {
 
 
-
-
-
         driver.findElement(By
                 .xpath("//span[@class=\"mail-ComposeButton-Text\"]"))
                 .click();
