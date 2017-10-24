@@ -1,6 +1,4 @@
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.net.MalformedURLException;
 
@@ -9,20 +7,23 @@ import static java.util.concurrent.TimeUnit.SECONDS;
 /**
  *
  */
-public class Selenium {
+public class YandexMailPage extends BasePage {
 
-    static WebDriver driver = new ChromeDriver();
+    YandexMailPage() {
+        driver.get("https://mail.yandex.ru");
+    }
+
+    YandexLoginPage login() {
+        driver.findElement(By.xpath("//span[text()=\"Войти в Яндекс.Почту\"]")).click();
+        return new YandexLoginPage();
+    }
+
 
     public static void main(String[] args) throws InterruptedException, MalformedURLException {
 
-        driver.manage().timeouts().implicitlyWait(60, SECONDS);
-        driver.manage().window().maximize();
 
-        driver.get("https://mail.yandex.ru");
 
-        driver.findElement(By.xpath("//span[text()=\"Войти в Яндекс.Почту\"]")).click();
 
-        login("alexanderk@adjuggler.ru", System.getProperty("yandexPass"));
 
         driver.findElement(By
                 .xpath("//span[@class=\"mail-ComposeButton-Text\"]"))
