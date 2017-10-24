@@ -3,7 +3,7 @@ import org.junit.Test;
 public class SendMailTest {
 
     @Test
-    public void sendMail() {
+    public static void sendMail() {
 
         YandexMailPage yandexMailPage = new YandexMailPage();
         YandexLoginPage yandexLoginPage = yandexMailPage.login();
