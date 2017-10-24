@@ -8,11 +8,11 @@ import java.net.MalformedURLException;
 import static java.util.concurrent.TimeUnit.SECONDS;
 
 /**
- * Created by motors on 01.09.2017.
+ *
  */
 public class Selenium {
 
-    private static WebDriver driver = new ChromeDriver();
+    static WebDriver driver = new ChromeDriver();
 
     public static void main(String[] args) throws InterruptedException, MalformedURLException {
 
@@ -21,7 +21,7 @@ public class Selenium {
 
         driver.get("https://passport.yandex.ru");
 
-        login("alexanderk@adjuggler.ru", "nr45WIN7");
+        login("alexanderk@adjuggler.ru", "hiddenPass");
 
         driver.findElement(By.xpath("//a[text()=\"Почта\"]")).click();
 
@@ -50,8 +50,6 @@ public class Selenium {
         driver.findElement(By.xpath("//div[@class=\"ns-view-container-desc mail-MessagesList js-messages-list mail-MessagesList_height_small\"]/div[1]//span[@class=\"_nb-checkbox-flag _nb-checkbox-normal-flag\"]")).click();
 
         driver.findElement(By.xpath("//span[text()=\"Удалить\"]")).click();
-
-//        driver.findElement(By.xpath("//span[text()=\"Удалить\" and @class=\"_nb-button-text\"]")).click();
 
         Thread.sleep(2000);
 
