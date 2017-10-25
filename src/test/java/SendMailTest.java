@@ -9,8 +9,12 @@ public class SendMailTest {
         YandexLoginPage yandexLoginPage = yandexMailPage.login();
         yandexMailPage = yandexLoginPage.login("alexanderk@adjuggler.ru", System.getProperty("yandexPass"));
 
+        yandexMailPage.close();
+
         System.out.println(6);
 
         System.out.println(5);
+
+
     }
 }
