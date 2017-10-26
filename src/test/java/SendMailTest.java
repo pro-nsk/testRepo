@@ -3,18 +3,17 @@ import org.junit.Test;
 public class SendMailTest {
 
     @Test
-    public void sendMail() {
+    public void sendMail() throws InterruptedException {
 
         YandexMailPage yandexMailPage = new YandexMailPage();
         YandexLoginPage yandexLoginPage = yandexMailPage.login();
         yandexMailPage = yandexLoginPage.login("alexanderk@adjuggler.ru", System.getProperty("yandexPass"));
 
+        yandexMailPage.writeMail("alexanderk@adjuggler.ru", "theme");
+        yandexMailPage.refreshCheck();
+        yandexMailPage.deleteLastMail();
+        yandexMailPage.other();
+
         yandexMailPage.close();
-
-        System.out.println(6);
-
-        System.out.println(5);
-
-
     }
 }
