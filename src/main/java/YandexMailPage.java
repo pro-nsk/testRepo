@@ -1,7 +1,5 @@
 import org.openqa.selenium.By;
 
-import java.net.MalformedURLException;
-
 /**
  *
  */

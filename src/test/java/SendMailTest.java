@@ -13,6 +13,7 @@ public class SendMailTest {
         yandexMailPage.refreshCheck();
         yandexMailPage.deleteLastMail();
         yandexMailPage.other();
+        
 
         yandexMailPage.close();
     }
