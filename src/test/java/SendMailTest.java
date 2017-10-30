@@ -12,9 +12,18 @@ public class SendMailTest {
         yandexMailPage.writeMail("alexanderk@adjuggler.ru", "theme");
         yandexMailPage.refreshCheck();
         yandexMailPage.deleteLastMail();
-        yandexMailPage.other();
+//        yandexMailPage.other();
         
 
         yandexMailPage.close();
+    }
+
+    @Test
+    public void htmlTable() {
+        HtmlTableExample htmlTableExample = new HtmlTableExample();
+
+        Class<? extends HtmlTableExample> aClass = htmlTableExample.getClass();
+
+        htmlTableExample.close();
     }
 }
