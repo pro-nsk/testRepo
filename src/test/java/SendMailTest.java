@@ -14,6 +14,7 @@ public class SendMailTest {
         yandexMailPage.deleteLastMail();
         // yandexMailPage.other();
         System.out.println(666);
+        System.out.println(555);
 
         yandexMailPage.close();
     }
