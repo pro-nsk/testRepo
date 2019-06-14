@@ -15,6 +15,7 @@ public class SendMailTest {
         // yandexMailPage.other();
         System.out.println(666);
         System.out.println(555);
+        System.out.println(333);
 
         yandexMailPage.close();
     }
